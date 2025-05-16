@@ -27,7 +27,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
       z-index: 10;
     }
 
@@ -35,50 +35,50 @@
       background: white;
       color: #222;
       width: 95vw;
-      max-width: 380px;
-      border-radius: 14px;
-      padding: 16px 16px;
+      max-width: 190px;
+      border-radius: 7px;
+      padding: 8px 8px;
       text-align: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-      font-size: 14px;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+      font-size: 7px;
     }
 
     .popup h2 {
-      margin: 0 0 12px 0;
-      font-size: 18px;
+      margin: 0 0 6px 0;
+      font-size: 9px;
     }
 
     .popup hr {
       border: none;
-      border-top: 1px solid #ddd;
-      margin: 12px 0;
+      border-top: 0.5px solid #ddd;
+      margin: 6px 0;
     }
 
     .popup p {
       margin: 0;
-      font-size: 14px;
+      font-size: 7px;
     }
 
     .options {
       background: #c9d1dc;
       width: 95vw;
-      max-width: 380px;
-      border-radius: 14px;
+      max-width: 190px;
+      border-radius: 7px;
       overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
     }
 
     .option {
       display: flex;
       align-items: center;
-      padding: 10px 14px;
-      border-top: 1px solid #ddd;
+      padding: 5px 7px;
+      border-top: 0.5px solid #ddd;
       cursor: default;
       color: #999;
       background-color: #c9d1dc;
       user-select: none;
-      gap: 12px;
-      font-size: 14px;
+      gap: 6px;
+      font-size: 7px;
     }
 
     .option:first-child {
@@ -99,8 +99,8 @@
     }
 
     .option svg {
-      width: 18px;
-      height: 18px;
+      width: 9px;
+      height: 9px;
       flex-shrink: 0;
       fill: currentColor;
     }
@@ -109,8 +109,8 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 60px;
-      transform: translate(60px, -250px);
+      width: 30px;
+      transform: translate(30px, -125px);
       animation: bounce 1.4s infinite;
       z-index: 11;
       pointer-events: none;
@@ -118,10 +118,10 @@
 
     @keyframes bounce {
       0%, 100% {
-        transform: translate(60px, -250px);
+        transform: translate(30px, -125px);
       }
       50% {
-        transform: translate(60px, -265px);
+        transform: translate(30px, -132.5px);
       }
     }
   </style>
