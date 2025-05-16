@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Instagram Prompt</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: #00000099;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    .popup {
+      background: white;
+      color: #222;
+      width: 95vw;
+      max-width: 380px;
+      border-radius: 14px;
+      padding: 16px 16px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      font-size: 14px;
+    }
+
+    .popup h2 {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+    }
+
+    .popup hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 12px 0;
+    }
+
+    .popup p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .options {
+      background: #c9d1dc;
+      width: 95vw;
+      max-width: 380px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-top: 1px solid #ddd;
+      cursor: default;
+      color: #999;
+      background-color: #c9d1dc;
+      user-select: none;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .option:first-child {
+      border-top: none;
+    }
+
+    .option.browser {
+      color: #0056b3;
+      background-color: #e0e7ff;
+      cursor: pointer;
+      font-weight: 600;
+      user-select: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .option.browser:hover {
+      background-color: #c7d2fe;
+    }
+
+    .option svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      transform: translate(60px, -250px);
+      animation: bounce 1.4s infinite;
+      z-index: 11;
+      pointer-events: none;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(60px, -250px);
+      }
+      50% {
+        transform: translate(60px, -265px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="clraew.png" alt="arrow" class="arrow" />
+
+    <div class="popup">
+      <h2>Open in Instagram</h2>
+      <hr />
+      <p>To get the best experience, click "..." in the top right, and select <b>Open in browser</b></p>
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 3a2 2 0 0 0-2 2v16l7-5 7 5V5a2 2 0 0 0-2-2H5z"></path>
+        </svg>
+        Report
+      </div>
+      <div class="option browser" onclick="window.open('https://t.me/+BT96NoEJ9eY0YTky', '_blank')">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M22.46 2.72c-.33-.3-.81-.37-1.19-.17L2.64 11.44c-.46.22-.57.8-.2 1.14l4.5 4.29c.22.21.54.29.83.21l3.63-1.14 5.92 4.4c.46.32 1.11.09 1.32-.46l3.74-14.53c.1-.38-.04-.77-.36-1.13zM9.7 15.3l-1.56-.7 7.3-5.04-4.74 5.74z"/>
+        </svg>
+        Open in browser
+      </div>
+      <div class="option">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3.9 12c0-1.19.96-2.15 2.15-2.15h3v-1.5h-3a3.66 3.66 0 0 0 0 7.3h3v-1.5h-3A2.15 2.15 0 0 1 3.9 12zm6.1-2.15h4v1.5h-4v-1.5zm5.85-3.5a3.66 3.66 0 0 0-3.65 3.65v1.5a3.66 3.66 0 0 0 3.65 3.65h3a3.66 3.66 0 0 0 0-7.3h-3zm2.15 4.8h-3v-1.5h3a1.15 1.15 0 1 1 0 2.3z"/>
+        </svg>
+        Copy link
+      </div>
+    </div>
+  </div>
+</body>
+</html>
