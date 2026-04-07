@@ -14,13 +14,36 @@
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background: url('IMG_7953.JPG') no-repeat center center fixed;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+    background: #0b0b0b;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -20px;
+    background: url('78E302C2-596D-4144-9894-7E4461E5BDD7.JPG') no-repeat center center;
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(1.05);
+    z-index: -2;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: -1;
   }
 
   .wrapper {
@@ -56,7 +79,7 @@
     padding: 25px 37.5px;
     font-size: 34.375px;
     font-weight: bold;
-    border: none;
+    border: 2.5px solid #000;
     border-radius: 25px;
     color: #fff;
     text-decoration: none;
@@ -64,7 +87,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 31.25px;
-    box-shadow: 0 12.5px 31.25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12.5px 31.25px rgba(0, 0, 0, 0.25);
     transition: all 0.35s ease;
     cursor: pointer;
     outline: none;
@@ -93,7 +116,8 @@
 
   .button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 18.75px 43.75px rgba(0, 0, 0, 0.3), 0 0 18.75px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    border-color: #000;
   }
 
   .button:active {
@@ -114,13 +138,13 @@
   }
 
   .telegram {
-    background: linear-gradient(135deg, #1c92d2, #f2fcfe);
-    color: #fff;
+    background: linear-gradient(135deg, #0b0f14, #1b222c, #2f3a48);
+    color: #e9f1ff;
   }
 
   .instagram {
     background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
-    animation: gradientMove 5s ease infinite;
+    animation: gradientMove 6s ease infinite;
   }
 
   @keyframes gradientMove {
@@ -147,6 +171,17 @@
     box-shadow: 0 15.625px 37.5px rgba(0, 0, 0, 0.3);
   }
 
+  .cta-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 750px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 31.25px;
+    padding: 35px 35px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18.75px 46.875px rgba(0, 0, 0, 0.25);
+  }
+
   .info-text {
     font-size: 35.9px;
     color: #fff;
@@ -163,11 +198,23 @@
         <i class="fab fa-instagram"></i>
         <span>Основной Instagram</span>
       </a>
-      <a class="button telegram" href="https://t.me/+WXX2BLzg3Q04NGMy" target="_blank">
+      <a class="button telegram" href="https://t.me/+8ms-ZTOGiSU3Mjky" target="_blank">
         <i class="fab fa-telegram-plane"></i>
         <span>Канал Темки от Деловара</span>
       </a>
+	  <a class="button telegram" href="https://t.me/+8ms-ZTOGiSU3Mjky" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+        <span>Канал Деловара</span>
+      </a>
+	  
     </div>
+  </div>
+
+  <div class="cta-wrapper">
+    <a class="button telegram" href="https://t.me/kate333_hr" target="_blank">
+      <i class="fab fa-telegram-plane"></i>
+      <span>Работа в Киеве 1500-2000$ ставка</span>
+    </a>
   </div>
 
   <div class="info-wrapper">
